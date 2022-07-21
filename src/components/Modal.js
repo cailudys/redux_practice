@@ -26,7 +26,7 @@ function Modal({ show, showModal, hideModal }) {
 }
 
 const mapStateToProps = (state) => ({
-  show: state.show,
+  show: state.modal.show,
 });
 
 const mapDispatchToProps = (dispatch) =>
