@@ -9,3 +9,9 @@ export const decrement = (payload) => ({
   type: DECREMENT,
   payload,
 });
+
+export const increment_async = (payload) => (dispatch) => {
+  setTimeout(() => {
+    dispatch(increment(payload));
+  }, 3000);
+};

@@ -9,3 +9,9 @@ export const hideModal = (payload) => ({
   type: HIDE,
   payload,
 });
+
+export const showModal_async = () => (dispatch) => {
+  setTimeout(() => {
+    dispatch(showModal());
+  }, 3000);
+};

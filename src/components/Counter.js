@@ -8,7 +8,7 @@ function Counter(props) {
     <div>
       <button
         onClick={() => {
-          props.increment(5);
+          props.increment_async(5);
         }}
       >
         +
