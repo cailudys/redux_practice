@@ -1,5 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as counterActions from "../store/actions/counter.actions";
 
 function Counter(props) {
   return (
@@ -18,12 +20,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  increment() {
-    dispatch({ type: "increment" });
-  },
-  decrement() {
-    dispatch({ type: "decrement" });
-  },
+  ...bindActionCreators(counterActions, dispatch),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);
