@@ -1,7 +1,9 @@
 import { DECREMENT, INCREMENT } from "../const/counter.const";
+import { HIDE, SHOW } from "../const/modal.const";
 
 const initialState = {
   count: 0,
+  show: false,
 };
 
 // 这是一个reducer函数，在createStore方法中会被回调，回调时会依次传入 state， action两个参数。
@@ -10,11 +12,23 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
       return {
+        ...state,
         count: state.count + action.payload,
       };
     case DECREMENT:
       return {
+        ...state,
         count: state.count - action.payload,
+      };
+    case SHOW:
+      return {
+        ...state,
+        show: true,
+      };
+    case HIDE:
+      return {
+        ...state,
+        show: false,
       };
     default:
       return state;
