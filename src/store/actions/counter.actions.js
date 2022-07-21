@@ -1,7 +1,9 @@
+import { DECREMENT, INCREMENT } from "../const/counter.const";
+
 export const increment = () => ({
-  type: "increment",
+  type: INCREMENT,
 });
 
 export const decrement = () => ({
-  type: "decrement",
+  type: DECREMENT,
 });
