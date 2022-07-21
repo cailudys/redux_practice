@@ -6,9 +6,15 @@ import * as counterActions from "../store/actions/counter.actions";
 function Counter(props) {
   return (
     <div>
-      <button onClick={props.increment}>+</button>
+      <button
+        onClick={() => {
+          props.increment(5);
+        }}
+      >
+        +
+      </button>
       <span>{props.count}</span>
-      <button onClick={props.decrement}>-</button>
+      <button onClick={() => props.decrement(5)}>-</button>
     </div>
   );
 }
