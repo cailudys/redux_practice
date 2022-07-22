@@ -1,3 +1,7 @@
+// 这个中间件的目的是让我们放心的写 函数action 。 因为会被thunk 中间件正确处理。
+// 这个中间件的目的：是处理当action是一个函数的时候，以函数里的逻辑来执行，从而改变state。【不是一触发action state就会变的，怎么变要看函数的实现】
+// action的函数里可以使用setTimeout， async...await 来延迟dispatch(对象action)。
+
 export default ({ dispatch }) =>
   (next) =>
   (action) => {
