@@ -14,7 +14,7 @@ Redux 提供的模式和工具使您更容易理解应用程序中的状态何�
 
 # redux 工作流程
 
-![reudx工作流程图](public/redux%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg)
+![reudx工作流程图](public/redux%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
 1、首先要创建一个状态容器 store （创建时传入了 reducer 回调函数，这个函数会在触发 action 时被调用）。
 2、通过 store.dispatch() 方法来触发 action （触发 action 时，要传入 action 对象。）
 3、store 会在 action 触发之后，调用 reducer 函数。并把当前的 state 和 action 对象作为参数传递给 reducer 函数。
